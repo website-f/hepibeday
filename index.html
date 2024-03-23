@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Div</title>
+    <link rel="stylesheet" href="bootstrap.min.css"> <!-- assuming you have Bootstrap CSS file -->
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(235, 235, 235);
+        }
+
+        #btn-unclicked {
+            position: absolute;
+            transition: .3s;
+            padding: 10px;
+            height: 40px;
+            width: 150px;
+        }
+
+        #btn-unclicked-sec {
+            position: absolute;
+            transition: .3s;
+            padding: 10px;
+            height: 40px;
+            width: 150px;
+        }
+
+        #btn-unclicked-third {
+            position: absolute;
+            transition: .3s;
+            padding: 10px;
+            height: 40px;
+            width: 250px;
+        }
+
+        .noDisp {
+            display: none;
+        }
+
+        .marginTop {
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <div id="first">
+                <h1>HAPPY BIRTHDAYYY !!!</h1>
+                <h4>click below for your present</h4>
+                <a href="#" class="yes-first"><img src="gif-hb.gif" alt="GIF" style="max-width: 100%;"></a>
+            </div>
+            <div id="sec" class="noDisp">
+                <video width="320" height="240" controls>
+                    <source src="hbvid.mp4" type="video/mp4">
+                    <source src="hbvid.mp4" type="video/ogg">
+                  Your browser does not support the video tag.
+                  </video>
+            </div>
+        </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        
+
+        const yesFirst = document.querySelector(".yes-first");
+        const first = document.getElementById("first");
+        const sec = document.getElementById("sec");
+
+        yesFirst.addEventListener('click', function() {
+            first.classList.add("noDisp");
+            sec.classList.remove("noDisp")
+        })
+
+    </script>
+</body>
+</html>
